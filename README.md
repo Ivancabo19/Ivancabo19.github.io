@@ -6,21 +6,23 @@ Bienvenido/a a mi portafolio profesional. Aquí encontrarás información sobre 
 
 ## Sobre mí
 
-Breve presentación personal: 
+Breve presentación personal: Soy un programador full stack junior con experiencia en desarrollo web utilizando HTML, CSS, JavaScript y Java. Me encanta aprender nuevas tecnologías y trabajar en equipo. Tengo amplia experiencia trabajando con equipos diversos, tanto locales como extranjeros en entornos de manufactura. 
 
 ---
 
 ## HardSkills
 
-- Habilidad 1 
-- Habilidad 2 
-- Habilidad 3 
+- JavaScript 
+- HTML
+- CSS
+- Java
+- Python 
 ---
 
 ## Proyectos destacados
 
-### [ClickN'Sweet](enlace-al-proyecto)
-Descripción breve del proyecto, rol, tecnologías utilizadas y logros principales.
+### [ClickN'Sweet](https://luisalzrgcia.github.io/ClickNSweet/)
+Click N' Sweet es un proyecto academico full stack colaborativo en dónde creamos una e-commerce desde cero. Tuve una participación activa durante la realización del proyecto en dónde lideré al equipo en toma de decisiones. Descripción breve del proyecto, qué hace, cómo lo hiciste, y qué tecnologías usaste.
 
 
 
@@ -31,15 +33,15 @@ Descripción breve del proyecto, rol, tecnologías utilizadas y logros principal
 - **[Puesto o título]** — [Empresa o institución], [Año de inicio] - [Año de fin]
   Breve descripción de funciones o logros.
 
-- **[Título académico]** — [Institución], [Año de inicio] - [Año de fin]
+- **[Full-stack java developer]** — [Generations México], [2025]
+- **[Ingeniero Industrial]** — [TecNM Campus Culiacán], [2014] - [2019]
 
 ---
 
 ## Contacto
 
-- Email: [tu-email@ejemplo.com]
-- LinkedIn: [enlace-a-tu-linkedin]
-- Otras redes/profesionales: [enlace]
+- Email: [ivancabo19@gmail.com]
+- LinkedIn: [https://www.linkedin.com/in/iván-camacho/]
 
 ---
 
