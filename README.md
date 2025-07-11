@@ -6,7 +6,7 @@ Bienvenido/a a mi portafolio profesional. Aquí encontrarás información sobre 
 
 ## Sobre mí
 
-Breve presentación personal: Soy un programador full stack junior con experiencia en desarrollo web utilizando HTML, CSS, JavaScript y Java. Me encanta aprender nuevas tecnologías y trabajar en equipo. Tengo amplia experiencia trabajando con equipos diversos, tanto locales como extranjeros en entornos de manufactura. 
+Soy un programador full stack junior con experiencia en desarrollo web utilizando HTML, CSS, JavaScript y Java. Me encanta aprender nuevas tecnologías y trabajar en equipo. Tengo amplia experiencia trabajando con equipos diversos, tanto locales como extranjeros en entornos de manufactura. 
 
 ---
 
@@ -30,8 +30,8 @@ Click N' Sweet es un proyecto academico full stack colaborativo en dónde creamo
 
 ## Experiencia y formación
 
-- **[Puesto o título]** — [Empresa o institución], [Año de inicio] - [Año de fin]
-  Breve descripción de funciones o logros.
+- **[Desarrollador full-stack]** — [Click N' Sweet], [Mayo, 2025] - [Agosto, 2025]
+  Desarrollo de e-commerce full-stack para proyecto académico bajo la metodología scrum.
 
 - **[Full-stack java developer]** — [Generations México], [2025]
 - **[Ingeniero Industrial]** — [TecNM Campus Culiacán], [2014] - [2019]
