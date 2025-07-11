@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #B3E0F2; /* fondo suave celeste */
+  color: #406473; /* azul profundo para texto */
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background-color: #406473;
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #F2BE7E;
+}
+
+/* Secciones */
+.seccion {
+  padding: 2em;
+  max-width: 800px;
+  margin: auto;
+  background-color: #EFF6E0; /* fondo claro para secciones */
+  margin-top: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Proyectos */
+.proyecto img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  border: 2px solid #BF8969;
+}
+
+.proyecto a {
+  text-decoration: none;
+  color: #406473;
+  font-weight: bold;
+}
+
+.proyecto a:hover {
+  color: #592B11;
+}
+
+/* Habilidades */
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.skills-grid img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skills-grid img:hover {
+  transform: scale(1.15);
+}
+
+/* Contacto */
+#contacto a {
+  color: #406473;
+  font-weight: bold;
+}
+
+#contacto a:hover {
+  color: #592B11;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #406473;
+  color: white;
+  margin-top: 2em;
+}
