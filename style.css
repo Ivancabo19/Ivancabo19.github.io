@@ -1,4 +1,3 @@
-
 :root {
   --color-primario: #3A86FF;
   --color-texto: #222222;
@@ -7,6 +6,7 @@
   --color-azul-claro: #cbeeff;
   --color-azul: #00b3ff;
   --border-radius: 12px;
+  --color-secundario: #6c757d; /* Un gris para el botón de código */
 }
 
 html {
@@ -17,48 +17,49 @@ h1, h2, h3, h4 {
   font-family: 'Merriweather', serif;
 }
 
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif; /* Usar 'sans-serif' como fallback */
+}
+
 .seccion {
   padding: 2em;
   max-width: 800px;
-  margin: 2em auto;      /* CENTRA y añade separación arriba/abajo */
+  margin: 2em auto;
   background-color: #EFF6E0;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-
-html, body {
-  background: var(--color-fondo);
-  color: var(--color-texto);
-  margin: 0;
-  padding: 0;
-  font-family: 'Lato', serif;
-}
-
+/* --- Header y Navbar --- */
 header {
   background: var(--color-fondo);
   border-bottom: 1px solid var(--color-gris);
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 0 1rem;
 }
 
-nav {
+nav.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0.5rem 0;
 }
 
-/* Logo en navbar */
 .logo img {
   display: block;
-  width: 80px;       /* ancho deseado */
-  height: auto;       /* mantiene proporción */
+  width: 80px;
+  height: auto;
 }
 
-nav ul {
+nav .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -77,14 +78,26 @@ nav a:hover {
   color: var(--color-primario);
 }
 
-/* Hero */
+/* Ocultar el botón de hamburguesa por defecto en desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-texto);
+  padding: 0.5rem;
+}
+
+/* --- Hero Section --- */
 #hero {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 48vh;
-  background: var(--color-gris, #f5f8fb);
+  background: var(--color-gris);
   text-align: center;
+  padding: 2rem 1rem;
 }
 
 .hero-stack {
@@ -106,7 +119,7 @@ nav a:hover {
 }
 
 .hero-top {
-  max-width: 200px;    
+  max-width: 200px;
   width: 100%;
   margin: 0 auto;
 }
@@ -118,7 +131,6 @@ nav a:hover {
   color: #222;
 }
 
-/* La tarjeta del medio: más ancha, azul, y sobrepuesta */
 .hero-middle {
   background: var(--color-azul);
   color: #111;
@@ -127,18 +139,16 @@ nav a:hover {
   padding: 0.8em 2em;
   z-index: 2;
   box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
-  margin-top: -1.7rem;  /* Hace que se sobreponga a la superior */
-  margin-bottom: -1.2rem; /* Opcional: puede hacer que toque la inferior */
+  margin-top: -1.7rem;
+  margin-bottom: -1.2rem;
 }
 
-/* Texto de la tarjeta del medio */
 .hero-middle span {
   font-size: 2rem;
   font-weight: 400;
   color: #111;
 }
 
-/* Tarjeta inferior */
 .hero-bottom p {
   max-width: 300px;
   width: 100%;
@@ -147,15 +157,17 @@ nav a:hover {
   color: #222;
 }
 
-/* Sobre mí */
+/* --- Sobre Mí --- */
 #sobre-mi {
   padding: 3rem 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(113, 227, 247), rgba(0, 0, 0, 0))
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(113, 227, 247), rgba(0, 0, 0, 0));
 }
+
 #sobre-mi h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .sobre-mi-container {
   display: flex;
   align-items: center;
@@ -164,19 +176,23 @@ nav a:hover {
   max-width: 900px;
   margin: 0 auto;
   flex-wrap: wrap;
+  padding: 0 1rem;
 }
+
 .sobre-mi-texto {
   flex: 2;
   font-size: 1.18rem;
   line-height: 1.65;
   color: var(--color-texto);
 }
+
 .sobre-mi-foto {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .sobre-mi-foto img {
   width: 300px;
   height: 300px;
@@ -186,21 +202,24 @@ nav a:hover {
   box-shadow: 0 4px 16px 0 rgba(58,134,255,0.08);
 }
 
-
-/* Proyectos */
+/* --- Proyectos --- */
 #proyectos {
   padding: 3rem 0;
 }
+
 #proyectos h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .proyectos-grid {
   display: flex;
   gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 0 1rem;
 }
+
 .proyecto-card {
   position: relative;
   width: 320px;
@@ -215,9 +234,11 @@ nav a:hover {
   transition: transform 0.3s;
   cursor: pointer;
 }
+
 .proyecto-card:hover {
   transform: scale(1.05);
 }
+
 .proyecto-overlay {
   position: absolute;
   inset: 0;
@@ -234,15 +255,18 @@ nav a:hover {
   padding: 1.4rem;
   text-align: center;
 }
+
 .proyecto-card:hover .proyecto-overlay {
   opacity: 1;
   backdrop-filter: blur(4px);
 }
+
 .proyecto-buttons {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
 }
+
 .btn-demo, .btn-code {
   background: var(--color-primario);
   color: #fff;
@@ -254,15 +278,18 @@ nav a:hover {
   font-size: 1rem;
   transition: background 0.2s;
 }
+
 .btn-code {
   background: var(--color-secundario);
   color: #222;
 }
+
 .btn-demo:hover {
   background: #265bb3;
 }
+
 .btn-code:hover {
-  background: #3ad87b;
+  background: #495057;
 }
 
 .proyecto-title {
@@ -281,14 +308,16 @@ nav a:hover {
   pointer-events: none;
   transition: opacity 0.2s;
 }
+
 .proyecto-card:hover .proyecto-title {
   opacity: 0;
 }
 
-/* Habilidades */
+/* --- Habilidades --- */
 #habilidades {
   padding: 3rem 0;
 }
+
 #habilidades h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -308,7 +337,7 @@ nav a:hover {
 }
 
 .habilidad-col {
-  position: relative; /* para los pseudo-elementos */
+  position: relative;
   flex: 1;
   padding: 0 5rem;
   display: flex;
@@ -316,13 +345,12 @@ nav a:hover {
   align-items: center;
 }
 
-/* Para todas las columnas excepto la última */
 .habilidad-col:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 1rem;           /* ajusta si quieres que la línea empiece más abajo */
-  bottom: 1rem;        /* ajusta si quieres que termine más arriba */
-  right: -15px;            /* justo en el borde derecho de la columna */
+  top: 1rem;
+  bottom: 1rem;
+  right: -15px;
   width: 2px;
   background-color: rgba(0,0,0,0.2);
 }
@@ -330,11 +358,13 @@ nav a:hover {
 .habilidad-col h3 {
   margin-bottom: 1rem;
 }
+
 .habilidad-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .habilidad-col li {
   display: flex;
   align-items: center;
@@ -344,28 +374,33 @@ nav a:hover {
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
+
 .habilidad-col li img {
   width: 50px;
   height: 50px;
   transition: transform 0.2s;
 }
+
 .habilidad-col li:hover,
 .habilidad-col li:focus {
   transform: scale(1.15);
 }
+
 .habilidad-col li:hover img,
 .habilidad-col li:focus img {
   transform: scale(1.15);
 }
 
-/* Experiencia laboral */
+/* --- Experiencia laboral --- */
 #experiencia {
   padding: 3rem 0;
 }
+
 #experiencia h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .timeline {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -375,6 +410,7 @@ nav a:hover {
   position: relative;
   gap: 0.7rem 0;
 }
+
 .timeline::before {
   content: '';
   position: absolute;
@@ -385,13 +421,16 @@ nav a:hover {
   bottom: 0;
   transform: translateX(-50%);
 }
+
 .timeline-item {
   position: relative;
 }
+
 .timeline-item.left {
   grid-column: 1;
   text-align: right;
 }
+
 .timeline-item.right {
   grid-column: 2;
   text-align: left;
@@ -403,7 +442,7 @@ nav a:hover {
 .timeline-item.left:nth-child(3) { margin-top: -1rem; }
 .timeline-item.right:nth-child(4) { margin-top: 8.5rem; }
 
-/* Conectores individuales: asegúrate de que SIEMPRE tengan alto, color y estén bien ubicados */
+/* Conectores individuales */
 .timeline-item.left::before,
 .timeline-item.right::before {
   content: '';
@@ -411,18 +450,17 @@ nav a:hover {
   width: 32px;
   height: 2px;
   background: #e0e7ef;
-  /* Por defecto, pero individualmente lo ajustas abajo */
 }
 
-/* Ajuste de top para cada tarjeta, prueba y ajusta visualmente si lo necesitas */
+.timeline-item.left::before { right: -32px; }
+.timeline-item.right::before { left: -32px; }
+
+/* Ajuste de posición de conectores para el escalonado */
 .timeline-item.left:nth-child(1)::before { top: 70%; }
 .timeline-item.right:nth-child(2)::before { top: -30%; }
 .timeline-item.left:nth-child(3)::before { top: 75%; }
 .timeline-item.right:nth-child(4)::before { top: -40%; }
 
-/* Posición horizontal igual */
-.timeline-item.left::before { right: -32px; }
-.timeline-item.right::before { left: -32px; }
 
 /* Tarjetas */
 .timeline-content {
@@ -433,25 +471,31 @@ nav a:hover {
   z-index: 2;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.05);
 }
+
 .timeline-item.left .timeline-content {
   margin-right: 2rem;
 }
+
 .timeline-item.right .timeline-content {
   margin-left: 2rem;
 }
 
-/* Educación */
+/* --- Educación --- */
 #educacion {
   padding: 3rem 0;
 }
+
 #educacion h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .educacion-list {
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
+
 .educacion-item {
   background: #77f7e66c;
   border-radius: var(--border-radius);
@@ -460,29 +504,35 @@ nav a:hover {
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
 }
 
-/* Contacto */
+/* --- Contacto --- */
 #contacto {
   background: var(--color-gris);
   padding: 3rem 0;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
 }
+
 #contacto h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-/* Contenedor de contacto en dos columnas */
 .contacto-seccion .contacto-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* Botones copiar / mailto */
 .botones-contacto {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .botones-contacto button {
@@ -494,49 +544,48 @@ nav a:hover {
   cursor: pointer;
   font-weight: bold;
   transition: background 0.3s ease;
+  flex-grow: 1;
 }
 
 .botones-contacto button:hover {
   background-color: #598392;
 }
 
-/* Íconos sociales */
 .social-icons {
   display: flex;
   gap: 1rem;
   margin: 1rem 0;
+  flex-wrap: wrap;
 }
 
 .social-icons img {
   width: 45px;
   height: 45px;
   object-fit: contain;
-  filter: invert(15%); /* opcional para ajustar tono */
+  filter: invert(15%);
 }
 
-/* Botón descargar CV */
 .btn-descarga {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.8rem 1.6rem;
-  background-color: #F2BE7E;      /* color de acento cálido */
-  color: #592B11;                 /* texto oscuro para contraste */
+  background-color: #F2BE7E;
+  color: #592B11;
   font-weight: bold;
-  font-size: 1rem;                /* un poco más grande */
-  text-transform: uppercase;      /* opcional, para énfasis */
+  font-size: 1rem;
+  text-transform: uppercase;
   text-decoration: none;
-  border: none;                   /* quitar borde por defecto */
+  border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* sombra suave */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn-descarga:hover {
-  background-color: #BF8969;      /* tono más oscuro al pasar */
-  transform: translateY(-2px);    /* ligero “lift” */
+  background-color: #BF8969;
+  transform: translateY(-2px);
 }
 
-/* Formulario */
 .contacto-formulario form {
   display: flex;
   flex-direction: column;
@@ -568,7 +617,6 @@ nav a:hover {
   background-color: #598392;
 }
 
-/* Mensaje de éxito */
 #mensaje-enviado {
   color: green;
   margin-top: 1rem;
@@ -579,239 +627,162 @@ nav a:hover {
   display: none;
 }
 
-.contacto-info a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: px;
-  height: 38px;
-  background: rgba(255, 255, 255, 0.1);
-  color: rgb(6, 69, 173);
-  margin-right: 10px;
-  transition: all 0.3s ease;
-}
-
-.contacto-info a:hover {
-  background: var(--color-gris);
-  transform: translateY(-3px);
-}
-
-/* ---- Contacto full-width ---- */
-#contacto {
-  /* Anula el max-width de .seccion y ocupa todo el ancho */
-  max-width: 100%;
-  width: 100%;
-  margin: 0;        /* Quita el centramiento automático */
-  padding: 4rem 2rem; /* Espaciado arriba/abajo y laterales */
-  background-color: var(--color-gris); /* Tu gris claro */
-}
-
-/* Este interior vuelve a centrar sólo el grid */
-#contacto .contacto-grid {
-  max-width: 800px;  /* Mismo ancho que tus otras secciones */
-  margin: 0 auto;    /* Centrado horizontal */
-}
-
-.botones-contacto {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.botones-contacto button {
-  background-color: #267c9e;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.botones-contacto button:hover {
-  background-color: #598392;
-}
-
-.btn-descarga {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.2rem;
-  background-color: #598392;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.btn-descarga:hover {
-  background-color: #124559;
-}
-
-/* Footer */
+/* --- Footer --- */
 footer {
   text-align: center;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 1rem 1rem 1rem;
   color: #888;
   font-size: 0.9rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
-/* ================================
-   Responsive: Habilidades, Experiencia y Contacto (≤768px)
-   ================================ */
+/* ====================================
+    MEDIA QUERIES PARA RESPONSIVIDAD
+   ==================================== */
 @media (max-width: 768px) {
-  /* 1) Habilidades: columnas → vertical + separadores horizontales */
+  /* Navbar: Oculta los links y muestra el botón de hamburguesa */
+  nav .nav-links {
+    display: none; /* Oculta los links por defecto en móvil */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px; /* Ajusta según la altura de tu header para que aparezca debajo */
+    left: 0;
+    background-color: var(--color-fondo);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 90;
+    padding: 1rem 0;
+  }
+
+  nav .nav-links li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  /* Cuando el navbar tiene la clase 'open', muestra los links */
+  nav.navbar.open .nav-links {
+    display: flex;
+  }
+
+  /* Muestra el botón de hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Sobre Mí: Ajustar foto y texto */
+  .sobre-mi-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sobre-mi-foto img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Proyectos: Ajustar tamaño de tarjeta */
+  .proyecto-card {
+    width: 90%; /* Hace las tarjetas casi de ancho completo en móviles */
+    max-width: 320px; /* Mantiene un límite si la pantalla es muy grande */
+    margin: 1rem auto; /* Centra las tarjetas */
+  }
+
+  /* Habilidades: columnas → vertical + separadores horizontales */
   #habilidades .habilidades-container {
     flex-direction: column;
     align-items: stretch;
   }
-  /* elimina líneas verticales */
   #habilidades .habilidad-col::after {
-    display: none;
+    display: none; /* Elimina líneas verticales */
   }
-  /* separador horizontal */
   #habilidades .habilidad-col {
     padding: 1rem 2rem;
   }
   #habilidades .habilidad-col:not(:last-child) {
-    border-bottom: 2px solid rgba(0,0,0,0.2);
+    border-bottom: 2px solid rgba(0,0,0,0.2); /* Separador horizontal */
     margin-bottom: 1rem;
   }
+  .habilidad-col li {
+    font-size: 1.2rem;
+  }
+  .habilidad-col li img {
+    width: 40px;
+    height: 40px;
+  }
 
-  /* 2) Experiencia: quita línea de tiempo y conectores, tarjetas full‑width */
-  #experiencia .timeline::before {
+  /* Experiencia: quita línea de tiempo y conectores, tarjetas en una sola columna */
+  .timeline {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    padding: 0 1rem;
+  }
+  .timeline::before {
+    display: none; /* Oculta la línea vertical central */
+  }
+  .timeline-item.left,
+  .timeline-item.right {
+    grid-column: 1; /* Todos los ítems en la primera columna */
+    text-align: left; /* Alinea el texto a la izquierda para todos */
+  }
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* Resetea los márgenes para el escalonado en móvil */
+  .timeline-item.left:nth-child(1),
+  .timeline-item.right:nth-child(2),
+  .timeline-item.left:nth-child(3),
+  .timeline-item.right:nth-child(4) {
+    margin-top: 0.5rem;
+  }
+  /* Oculta los conectores individuales en móvil */
+  .timeline-item.left::before,
+  .timeline-item.right::before {
     display: none;
   }
-  #experiencia .timeline {
-    display: block;
+
+  /* Contacto: columnas → vertical */
+  .contacto-seccion .contacto-grid {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    padding: 0 1rem;
   }
-  #experiencia .timeline-item {
+  .botones-contacto {
+    flex-direction: column; /* Apilar botones de contacto */
+    align-items: stretch; /* Estirar botones al ancho completo */
+  }
+  .botones-contacto button {
     width: 100%;
-    margin: 1.5rem 0;
-    text-align: left !important;
   }
-  #experiencia .timeline-item .timeline-content {
-    margin: 0;
-    /* opcional: full width dentro de la sección */
-    width: auto;
+  .social-icons {
+    justify-content: center; /* Centrar los iconos sociales */
   }
-  /* quita los pseudo‑conectores */
-  #experiencia .timeline-content::before {
-    display: none;
-  }
-
-  /* 3) Contacto: info arriba + formulario abajo */
-  #contacto .contacto-grid {
-    display: block;
-  }
-  #contacto .contacto-info {
-    margin-bottom: 2rem;
-  }
-  #contacto .contacto-formulario {
-    margin-top: 0;
-  }
-}
-
-/* — Centrar el formulario en Contacto — */
-.contacto-formulario {
-  display: flex;
-  justify-content: center;
-}
-
-.contacto-formulario form {
-  width: 100%;
-  max-width: 400px;   /* ajusta este valor al ancho que quieras */
-  margin: 0;          /* elimina márgenes internos inesperados */
-}
-
-/* — Menú hamburguesa — */
-
-/* Oculta el botón en desktop */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--color-primario);
-}
-
-/* Estilos básicos para la lista */
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Responsive: hasta 768px */
-@media (max-width: 768px) {
-  /* Muestra el botón */
-  .menu-toggle {
-    display: block;
-  }
-
-  /* Oculta inicialmente los enlaces */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    background: var(--color-seccion);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    z-index: 10;
-  }
-
-  /* Cuando .navbar tenga la clase .open, mostramos el menu */
-  .navbar.open .nav-links {
-    display: flex;
-  }
-}
-
-/* —————————————
-   Responsive (≤768px)
-   ————————————— */
-@media (max-width: 768px) {
-
-  /* 1) Hamburger y Nav */
-  .menu-toggle {
-    display: block;               /* muestra el botón */
-    position: relative;           /* en flujo normal */
-    z-index: 20;                  /* encima de todo */
-  }
-  .nav-links {
-    display: none;                /* oculto por defecto */
-    position: absolute;
-    top: 100%;                     /* justo debajo de la barra */
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: var(--color-seccion);
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .navbar.open .nav-links {
-    display: flex;                /* se abre al hacer toggle */
-  }
-  .nav-links li {
-    text-align: center;           /* centrar cada link */
-  }
-
-  /* 2) Centrar el formulario y ajustar ancho */
   .contacto-formulario {
-    display: flex;
-    justify-content: center;
+    width: 100%;
   }
-  .contacto-formulario form {
-    width: 90%;                   /* ocupa casi todo el ancho */
-    max-width: 360px;             /* no se haga demasiado grande */
-    margin: 0;
+
+  /* Ajustes generales para secciones en móviles */
+  .seccion {
+    margin: 1em auto;
+    padding: 1.5em;
+  }
+}
+
+/* Media Query para pantallas muy pequeñas (ej. teléfonos antiguos) */
+@media (max-width: 480px) {
+  .hero-middle span {
+    font-size: 1.5rem;
+  }
+  .hero-bottom p {
+    font-size: 1rem;
+  }
+  .proyecto-card {
+    width: 95%;
+  }
+  .habilidad-col li {
+    font-size: 1.1rem;
+  }
+  .habilidad-col li img {
+    width: 35px;
+    height: 35px;
   }
 }
