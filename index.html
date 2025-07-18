@@ -3,103 +3,236 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog | Iván Camacho</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet" />
+  <title>Portafolio | IvánCabo</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("TU_PUBLIC_KEY");
+    })();
+  </script>
 </head>
 
 <body>
   <header>
-    <h1><a href="index.html">Iván Camacho</a></h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="portafolio.html">Portafolio</a></li>
-        <li><a href="acerca.html">Acerca de mí</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="blog.html">Blog</a></li>
+    <nav class="navbar">
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <a href="#inicio" class="logo"><img src="imagenes/logo2.png" alt="Logo Iván Camacho"></a>
+      <ul class="nav-links">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="inicio" class="seccion">
-    <h2>¡Hola! Soy Iván Camacho</h2>
-    <p>Desarrollador Full Stack Junior con pasión por crear soluciones web funcionales y atractivas.</p>
-  </section>
 
-  <section id="sobre-mi" class="seccion">
-    <h2>Sobre mí</h2>
-    <p>
-      Soy un programador full stack junior con experiencia en desarrollo web utilizando HTML, CSS, JavaScript y Java. 
-      Me encanta aprender nuevas tecnologías y trabajar en equipo. 
-      Tengo amplia experiencia trabajando con equipos diversos, tanto locales como extranjeros en entornos de manufactura. 
-    </p>
-  </section>
-
-  <section id="proyectos" class="seccion">
-    <h2>Proyectos</h2>
-    <div class="proyecto">
-      <h3>Click N' Sweet</h3>
-      <img src="imagenes/otros/Captura.PNG" alt="Captura del proyecto">
-      <p>Click N' Sweet es un proyecto academico full stack colaborativo en dónde creamos una e-commerce desde cero. 
-        Tuve una participación activa durante la realización del proyecto
-        en dónde lideré al equipo en toma de decisiones. 
-      <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript, MySQL, Bootstrap.</p>
-      <a href="https://github.com/LuisaLzrGcia/ClickNSweet" target="_blank">Ver código</a> |
-      <a href="https://luisalzrgcia.github.io/ClickNSweet/" target="_blank">Ver demo</a>
-    </div>
-  </section>
-
-<section class="seccion" id="habilidades">
-  <h2>Habilidades</h2>
-
-  <div class="habilidades-contenedor">
-    <!-- Frontend -->
-    <div class="habilidad-columna">
-      <h3>Frontend</h3>
-      <div class="skills-grid">
-        <div class="skill"><img src="imagenes/frontend/html5_226269.png" alt="HTML5" title="HTML5" /></div>
-        <div class="skill"><img src="imagenes/frontend/CSS3_icon-icons.com_67069.png" alt="CSS3" title="CSS3" /></div>
-        <div class="skill"><img src="imagenes/frontend/js_5968292.png" alt="JavaScript" title="JavaScript" /></div>
+<main>
+  <section id="hero">
+    <div class="hero-stack">
+      <div class="hero-card hero-top">
+        <h1>¡Hola!</h1>
+      </div>
+      <div class="hero-card hero-middle">
+        <span>Soy Iván Camacho</span>
+      </div>
+      <div class="hero-card hero-bottom">
+        <p>Desarrollador Full Stack Junior con pasión por crear soluciones web funcionales y atractivas.</p>
       </div>
     </div>
+  </section>
+</main>
 
-    <!-- Backend -->
-    <div class="habilidad-columna">
-      <h3>Backend</h3>
-      <div class="skills-grid">
-        <div class="skill"><img src="imagenes/backend/java-original.svg" alt="Java" title="Java" /></div>
-        <div class="skill"><img src="imagenes/backend/mysql-original-wordmark.svg" alt="MySQL" title="MySQL" /></div>
-        <div class="skill"><img src="imagenes/backend/nodejs-original-wordmark.svg" alt="Node.js" title="Node.js" /></div>
+    <section id="sobre-mi">
+      <h2>Sobre Mí</h2>
+        <div class="sobre-mi-container">
+      <div class="sobre-mi-texto">
+        <p>
+          ¡Hola! Soy Iván Camacho, desarrollador web con pasión por crear soluciones digitales que sean intuitivas, atractivas y eficientes. Me especializo en el desarrollo Frontend y Backend, siempre buscando aprender nuevas tecnologías y mejorar mis habilidades.
+        </p>
+        <p>
+          En mi tiempo libre disfruto experimentar con nuevas herramientas y seguir aprendiendo.
+        </p>
+      </div>
+      <div class="sobre-mi-foto">
+        <img src="imagenes/otros/foto.png" alt="Foto de Iván Cabo">
+      </div>
+      </div>
+    </section>
+
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="proyectos-grid">
+        <!-- Tarjetas de proyecto -->
+        <div class="proyecto-card" style="--img:url(imagenes/otros/ClickNSweet.png)">
+          <div class="proyecto-title">
+            Click N' Sweet
+      </div>
+        <div class="proyecto-overlay">
+            <p>Click N' Sweet es un proyecto academico full stack colaborativo en dónde creamos una e-commerce.</p>
+            <div class="proyecto-buttons">
+              <a href="https://luisalzrgcia.github.io/ClickNSweet/" target="_blank" class="btn-demo">Demo</a>
+              <a href="https://github.com/LuisaLzrGcia/ClickNSweet" target="_blank" class="btn-code">Código</a>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto-card" style="--img:url(imagenes/otros/LandingPage.png)">
+          <div class="proyecto-title">
+            Landing Page
+      </div>
+        <div class="proyecto-overlay">
+            <p>Proyecto de simulacro de Hackathon.</p>
+            <div class="proyecto-buttons">
+              <a href="https://hackaton-landingpage.netlify.app/" target="_blank" class="btn-demo">Demo</a>
+              <a href="https://github.com/IngJavRod/SA-HA1_Hackathon_1" target="_blank" class="btn-code">Código</a>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto-card" style="--img:url(imagenes/otros/Blogsite.png)">
+          <div class="proyecto-title">
+            Blog site
+      </div>
+        <div class="proyecto-overlay">
+            <p>Proyecto de creación de una página web y el inicio del proyecto Click N' Sweet.</p>
+            <div class="proyecto-buttons">
+              <a href="https://luisalzrgcia.github.io/theblogsite_new/index.html" target="_blank" class="btn-demo">Demo</a>
+              <a href="https://github.com/LuisaLzrGcia/theblogsite_new" target="_blank" class="btn-code">Código</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="habilidades-container">
+        <div class="habilidad-col">
+          <h3>Frontend</h3>
+          <ul>
+            <li><img src="imagenes/frontend/html5_226269.png" alt="HTML5"/>HTML5</li>
+            <li><img src="imagenes/frontend/CSS3_icon-icons.com_67069.png" alt="CSS3"/>CSS3</li>
+            <li><img src="imagenes/frontend/js_5968292.png" alt="JavaScript"/>JavaScript</li>
+            <!-- ... -->
+          </ul>
+        </div>
+        <div class="habilidad-col">
+          <h3>Backend</h3>
+          <ul>
+            <li><img src="imagenes/backend/java-original.svg" alt="Java"/>Java</li>
+            <li><img src="imagenes/backend/mysql-original-wordmark.svg" alt="MySQL"/>MySQL</li>
+            <!-- ... -->
+          </ul>
+        </div>
+        <div class="habilidad-col">
+          <h3>Herramientas</h3>
+          <ul>
+            <li><img src="imagenes/backend/git-original.svg" alt="Git"/>Git</li>
+            <li><img src="imagenes/backend/github-original.svg" alt="GitHub"/>GitHub</li>
+            <!-- ... -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+<section id="experiencia">
+  <h2>Experiencia Laboral</h2>
+  <div class="timeline">
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>Desarrollador Fullstack</h3>
+        <span>Click N' Sweet | Mayo 2025 - Presente</span>
+        <p>Desarrollo de aplicación full-stack.</p>
       </div>
     </div>
-
-    <!-- Herramientas -->
-    <div class="habilidad-columna">
-      <h3>Herramientas</h3>
-      <div class="skills-grid">
-        <div class="skill"><img src="imagenes/backend/git-original.svg" alt="Git" title="Git" /></div>
-        <div class="skill"><img src="img/skills/github.png" alt="GitHub" title="GitHub" /></div>
-        <div class="skill"><img src="img/skills/vscode.png" alt="VS Code" title="VS Code" /></div>
-        <div class="skill"><img src="img/skills/postman.png" alt="Postman" title="Postman" /></div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>Ingeniero de Manufactura de Partes de Servicio</h3>
+        <span>Nexteer Automotive | Febrero 2024 - Septiembre 2024</span>
+        <p>Organicé equipos multidisciplinarios para reactivar líneas de producción abandonadas.</p>
+      </div>
+    </div>
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>Ingeniero de Manufactura II</h3>
+        <span>Hella Automotive | Febrero 2022 - Mayo 2022</span>
+        <p>Encargado de dos líneas de producción y un proyecto en lanzamiento.</p>
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>Ingeniero de Manufactura Junior</h3>
+        <span>BHTC México | Mayo 2019 - Febrero 2022</span>
+        <p>Encargado de cinco líneas de producción y dos procesos especiales.</p>
       </div>
     </div>
   </div>
 </section>
 
-  <section id="contacto" class="seccion">
-    <h2>Contacto</h2>
-    <p>Puedes contactarme en: <a href="mailto:ivancabo19@gmail.com">ivancabo19@gmail.com</a></p>
-    <p>
-      <a href="https://github.com/ivancabo19" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com/in/iván-camacho" target="_blank">LinkedIn</a>
-    </p>
-  </section>
+    <section id="educacion">
+      <h2>Educación</h2>
+      <div class="educacion-list">
+        <div class="educacion-item">
+          <h3>Desarrollador full-stack</h3>
+          <span>Generations México | Mayo 2025 - Agosto 2025</span>
+          <p>Bootcamp intensivo en desarrollo Full-Stack. Aprendí tecnologías Frontend como HTML, CSS y JavaScript. Backend con Java, Spring Boot. Y otras herramientas como Jira, Figma y metodologías agiles.</p>
+          <h3>Ingeniería Industrial</h3>
+          <span>TecNM Campus Culiacán |  Agosto 2014 - Mayo 2019</span>
+          <p>Ingeniero Industrial con especialidad en calidad y productividad.</p>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Iván Camacho Bojórquez. Todos los derechos reservados.</p>
-  </footer>
+      </div>
+    </section>
+
+    
+<section id="contacto" class="seccion contacto-seccion">
+  <h2>Contacto</h2>
+
+  <div class="contacto-grid">
+    <!-- Columna izquierda: info y acciones -->
+    <div class="contacto-info">
+      <h3>Puedes escribirme directamente o copiar mi correo:</h3>
+      <h3>ivan.camacho.bojorquez@gmail.com</h3>
+      <div class="botones-contacto">
+        <button id="btn-copiar">📋 Copiar correo</button>
+        <button id="btn-mailto">✉️ Enviar correo</button>
+      </div>
+
+      <h4>O encontrarme en mis redes sociales:</h4>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/iv%C3%A1n-camacho" target="_blank" aria-label="LinkedIn">
+          <img src="imagenes/otros/linkedin-brands.svg" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/ivancabo19" target="_blank" aria-label="GitHub">
+          <img src="imagenes/backend/github-original.svg" alt="GitHub">
+        </a>
+      </div>
+
+      <div class="descargar-cv">
+        <a href="CV/CV IVAN CAMACHO BOJORQUEZ.pdf" download class="btn-descarga">📄 Descargar CV</a>
+      </div>
+    </div>
+
+    <!-- Columna derecha: formulario -->
+    <div class="contacto-formulario">
+      <form id="form-contacto">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu email" required />
+        <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+        <button type="submit" class="btn-enviar">Enviar</button>
+      </form>
+      <p id="mensaje-enviado" class="oculto">¡Gracias por tu mensaje!</p>
+    </div>
+  </div>
+</section>
+
+
+      </main>
+    <footer>
+      <p>&copy; 2025 Iván Camacho</p>
+    </footer>
+  <script src="script.js"></script>
 </body>
 </html>
